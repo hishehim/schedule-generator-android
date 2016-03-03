@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C0C0C0"
+        android:layout_marginLeft="@dimen/list_margin"/>
+    <TableRow
+        android:id="@+id/section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/list_margin"
+        android:paddingBottom="@dimen/list_margin"
+        >
+        <TextView
+            android:id="@+id/label_sect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prefix_section"
+            android:paddingRight="@dimen/list_margin"
+            android:paddingEnd="@dimen/list_margin"
+            />
+        <TextView
+            android:id="@+id/sect_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxEms="2"
+            android:minEms="2"
+            />
+        <TextView
+            android:id="@+id/section_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </TableRow>
+</LinearLayout>

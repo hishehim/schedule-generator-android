@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity$AddClassDialogFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/separator3"
+        android:paddingLeft="@dimen/list_margin"
+        android:paddingRight="@dimen/list_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/separator1"
+                android:background="@color/colorAccent"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_margin="1dp"/>
+
+            <RelativeLayout
+                android:id="@+id/course_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+
+                <TableRow
+                    android:id="@+id/form_course"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="@string/label_course"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:paddingTop="@dimen/list_margin"
+                        android:paddingBottom="@dimen/list_margin"
+                        android:paddingRight="@dimen/list_margin"
+                        android:paddingEnd="@dimen/list_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorTextPrimary"
+                        />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/edtxt_course"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:padding="@dimen/list_margin"
+                        android:hint="@string/course_hint"
+                        android:gravity="right"
+                        android:maxLength="10"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/form_credits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/form_course">
+
+                    <TextView
+                        android:text="@string/label_credit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:padding="@dimen/list_margin"
+                        android:layout_marginRight="@dimen/list_margin"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_course_credit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_gravity="right|center_vertical" />
+                </TableRow>
+
+                <RadioGroup
+                    android:id="@+id/rg_course_priority"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/form_credits" >
+
+                    <RadioButton
+                        android:id="@+id/rb_essential"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rb_essential"
+                        android:textColorHighlight="@color/colorPrimaryLight"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:padding="@dimen/list_margin"
+                        android:checked="true"/>
+                    <RadioButton
+                        android:id="@+id/rb_secondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rb_secondary"
+                        android:textColorHighlight="@color/colorPrimaryLight"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:padding="@dimen/list_margin"/>
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/section_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/separator2"
+                    android:background="@color/colorAccent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="1dp"/>
+
+                <TableRow
+                    android:id="@+id/section_id"
+                    android:layout_below="@+id/separator2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="@string/section_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/list_margin"
+                        android:paddingTop="@dimen/list_margin"
+                        android:paddingRight="@dimen/list_margin"
+                        android:paddingEnd="@dimen/list_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorTextPrimary"/>
+
+                    <EditText
+                        android:id="@+id/edtxt_section_num"
+                        android:hint="@string/section_id_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/list_margin"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:minEms="2"
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:gravity="right"
+                        />
+                </TableRow>
+
+<!--                <TableRow
+                    android:id="@+id/class_code"
+                    android:layout_below="@+id/section_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="@string/class_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/list_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id/edtxt_class_code"
+                        android:hint="@string/class_code_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/list_margin"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:minEms="3"
+                        android:inputType="number"
+                        android:gravity="right"
+                        android:maxLength="10"
+                        />
+                </TableRow>-->
+
+                <TableRow
+                    android:id="@+id/section_instructor"
+                    android:layout_below="@+id/section_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="@string/instructor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/list_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id/edtxt_instructor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/list_margin"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:minEms="3"
+                        android:gravity="right"
+                        android:maxLength="100"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/section_location"
+                    android:layout_below="@+id/section_instructor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="@string/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/list_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id/edtxt_section_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/list_margin"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:minEms="3"
+                        android:layout_gravity="right"
+                        android:maxLength="50"
+                        android:gravity="right"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/section_class_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/section_location"
+                    android:gravity="center">
+
+
+                    <Button
+                        android:id="@+id/start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/start_time_default"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:paddingBottom="@dimen/list_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorAccent"
+                        style="?android:attr/borderlessButtonStyle"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/activity_vertical_margin"
+                        android:text="-"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                    <Button
+                        android:id="@+id/end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:paddingBottom="@dimen/list_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:text="@string/end_time_default"
+                        android:textColor="@color/colorAccent"
+                        style="?android:attr/borderlessButtonStyle"
+                        />
+                </TableRow>
+
+                <TableLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/section_class_time"
+                    android:padding="@dimen/list_margin"
+                    android:stretchColumns="*">
+
+                    <TableRow
+                        android:id="@+id/days_of_week"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" >
+
+                        <CheckBox
+                            android:id="@+id/section_monday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/monday"
+                            android:layout_span="1"/>
+
+                        <CheckBox
+                            android:id="@+id/section_tuesday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tuesday"
+                            android:layout_span="1"/>
+
+                        <CheckBox
+                            android:id="@+id/section_wednesday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wednesday"
+                            android:layout_span="1"/>
+
+                        <CheckBox
+                            android:id="@+id/section_thursday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/thursday"
+                            android:layout_span="1"/>
+
+                        <CheckBox
+                            android:id="@+id/section_friday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/friday"
+                            android:layout_span="1"/>
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/day_of_weekend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <CheckBox
+                            android:id="@+id/section_saturday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/saturday"
+                            android:layout_span="1"/>
+
+                        <CheckBox
+                            android:id="@+id/section_sunday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sunday"
+                            android:layout_span="1"/>
+                    </TableRow>
+                </TableLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/separator3"
+        android:background="@color/colorAccent"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_margin="1dp"
+        android:layout_above="@+id/footer_btn"/>
+
+    <TableRow
+        android:id="@+id/footer_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="end">
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_cancel"
+            android:padding="@dimen/list_margin"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginRight="@dimen/list_margin"
+            android:layout_marginEnd="@dimen/list_margin"
+            android:textColor="@color/colorPrimary"
+            style="?android:attr/borderlessButtonStyle"
+            />
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_save"
+            android:padding="@dimen/list_margin"
+            android:layout_marginRight="@dimen/list_margin"
+            android:layout_marginEnd="@dimen/list_margin"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorPrimary"
+            style="?android:attr/borderlessButtonStyle"
+            />
+    </TableRow>
+
+</RelativeLayout>

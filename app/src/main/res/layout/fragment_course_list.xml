@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity$EssentialCourses">
+    <!--tools:showIn="@layout/activity_main"-->
+
+    <LinearLayout
+        android:id="@+id/main_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        >
+        <!--android:layout_above="@+id/separator1"-->
+
+        <TextView
+            android:id="@+id/label_course_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_course_list"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <View
+            android:id="@+id/separator_primary_class"
+            android:background="@color/colorPrimaryLight"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+
+        <ListView
+            android:id="@+id/course_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+        <!--<TextView
+            android:id="@+id/label_secondary"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_seconadry"
+            android:paddingTop="@dimen/list_margin"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:onClick="toggleChildList"
+            />
+
+        <View
+            android:id="@+id/separator_secondary"
+            android:background="@color/colorAccent"
+            android:layout_below="@id/label_secondary"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <ListView
+            android:id="@+id/secondary_course_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/label_secondary"
+            >
+        </ListView>
+-->
+    </LinearLayout>
+
+
+</RelativeLayout>
